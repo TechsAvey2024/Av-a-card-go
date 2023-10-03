@@ -104,31 +104,31 @@ body {
   /* Icons */
   .correct[data-item=drinker],
   .flipped[data-item=drinker] {
-    background: url("assets/images/drinker.jpg") left center no-repeat #fff;
+    background: url("../images/drinker.jpg") left center no-repeat #fff;
     background-size: contain;
   }
   
   .correct[data-item=healthy],
   .flipped[data-item=healthy] {
-    background: url("assets/images/healthy.jpg") left center no-repeat #fff;
+    background: url("../images/healthy.jpg") left center no-repeat #fff;
     background-size: contain;
   }
   
   .correct[data-item=peaceful],
   .flipped[data-item=peaceful] {
-    background: url("assets/images/peaceful.jpg") left center no-repeat #fff;
+    background: url("../images/peaceful.jpg") left center no-repeat #fff;
     background-size: contain;
   }
   
   .correct[data-item=strong],
   .flipped[data-item=strong] {
-    background: url("assets/images/strong.jpg") left center no-repeat #fff;
+    background: url("../images/strong.jpg") left center no-repeat #fff;
     background-size: contain;
   }
   
   .correct[data-item=traveller],
   .flipped[data-item=traveller] {
-    background: url("assets/images/traveller.jpg") left center no-repeat #fff;
+    background: url("../images/traveller.jpg") left center no-repeat #fff;
     background-size: contain;
   }
 
