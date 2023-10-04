@@ -1,124 +1,124 @@
 body {
-    background-image: linear-gradient(to right, green, yellow);
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    height: 100%;
-    text-align: center;
+  background-image: linear-gradient(to right, green, yellow);
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  height: 100%;
+  text-align: center;
+
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, #f32170,
+      #ff6b08, #cf23cf, #eedd44);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+h1, h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 3.6em;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.6em;
+  text-transform: uppercase;
+}
+
+#seconds, #tens {
+  font-size: 2em;
+}
+
+#container {
+  margin: auto;
+  width: 800px;
   
-  }
-  h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to right, #f32170,
-        #ff6b08, #cf23cf, #eedd44);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
-  h1, h2 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-size: 3.6em;
-    text-transform: uppercase;
-  }
-  
-  h3 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 1.6em;
-    text-transform: uppercase;
-  }
-  
-  #seconds, #tens {
-    font-size: 2em;
-  }
- 
+}
+#container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[data-view=card] {
+  transform: rotateY(180deg);
+  width: 100px;
+  height: 140px;
+  border: solid 1px #d3cece;
+  border-radius: 5px;
+  float: left;
+  margin: 10px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #424141 22px, #333 22px, #333 24px, transparent 24px, transparent 67px, #333 67px, #333 69px, transparent 69px),
+              linear-gradient(225deg, #424141 22px, #333 22px, #333 24px, transparent 24px, transparent 67px, #333 67px, #333 69px, transparent 69px) 0 64px;;
+  background-color: #424141;
+  background-size: 74px 138px;
+}
+
+.flipped {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(0deg);
+}
+
+.reverse {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(180deg);
+}
+
+.correct {
+  opacity: 0.5;
+  cursor: default;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(0deg);
+}
+
+/* Icons */
+.correct[data-item=drinker],
+.flipped[data-item=drinker] {
+  background: url("../images/drinker.jpg") left center no-repeat #fff;
+  background-size: contain;
+}
+
+.correct[data-item=healthy],
+.flipped[data-item=healthy] {
+  background: url("../images/healthy.jpg") left center no-repeat #fff;
+  background-size: contain;
+}
+
+.correct[data-item=peaceful],
+.flipped[data-item=peaceful] {
+  background: url("../images/peaceful.jpg") left center no-repeat #fff;
+  background-size: contain;
+}
+
+.correct[data-item=strong],
+.flipped[data-item=strong] {
+  background: url("../images/strong.jpg") left center no-repeat #fff;
+  background-size: contain;
+}
+
+.correct[data-item=traveller],
+.flipped[data-item=traveller] {
+  background: url("../images/traveller.jpg") left center no-repeat #fff;
+  background-size: contain;
+}
+.correct[data-item=happy],
+.flipped[data-item=happy] {
+  background: url("../images/happy.jpg") left center no-repeat #fff;
+  background-size: contain;
+}
+
+
+@media screen and (max-width: 783px) {
   #container {
-    margin: auto;
-    width: 800px;
-    
+    width: auto;
+    margin: 5px auto;
   }
-  #container:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  [data-view=card] {
-    transform: rotateY(180deg);
-    width: 100px;
-    height: 140px;
-    border: solid 1px #d3cece;
-    border-radius: 5px;
-    float: left;
-    margin: 10px;
-    cursor: pointer;
-    background: linear-gradient(135deg, #424141 22px, #333 22px, #333 24px, transparent 24px, transparent 67px, #333 67px, #333 69px, transparent 69px),
-                linear-gradient(225deg, #424141 22px, #333 22px, #333 24px, transparent 24px, transparent 67px, #333 67px, #333 69px, transparent 69px) 0 64px;;
-    background-color: #424141;
-    background-size: 74px 138px;
-  }
-  
-  .flipped {
-    transition: 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-    transform: rotateY(0deg);
-  }
-  
-  .reverse {
-    transition: 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-    transform: rotateY(180deg);
-  }
-  
-  .correct {
-    opacity: 0.5;
-    cursor: default;
-    transform-style: preserve-3d;
-    position: relative;
-    transform: rotateY(0deg);
-  }
-  
-  /* Icons */
-  .correct[data-item=drinker],
-  .flipped[data-item=drinker] {
-    background: url("../images/drinker.jpg") left center no-repeat #fff;
-    background-size: contain;
-  }
-  
-  .correct[data-item=healthy],
-  .flipped[data-item=healthy] {
-    background: url("../images/healthy.jpg") left center no-repeat #fff;
-    background-size: contain;
-  }
-  
-  .correct[data-item=peaceful],
-  .flipped[data-item=peaceful] {
-    background: url("../images/peaceful.jpg") left center no-repeat #fff;
-    background-size: contain;
-  }
-  
-  .correct[data-item=strong],
-  .flipped[data-item=strong] {
-    background: url("../images/strong.jpg") left center no-repeat #fff;
-    background-size: contain;
-  }
-  
-  .correct[data-item=traveller],
-  .flipped[data-item=traveller] {
-    background: url("../images/traveller.jpg") left center no-repeat #fff;
-    background-size: contain;
-  }
-  .correct[data-item=happy],
-  .flipped[data-item=happy] {
-    background: url("../images/happy.jpg") left center no-repeat #fff;
-    background-size: contain;
-  }
-
-
-  @media screen and (max-width: 783px) {
-    #container {
-      width: auto;
-      margin: 5px auto;
-    }
-  }
+}

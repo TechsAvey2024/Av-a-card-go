@@ -16,9 +16,9 @@ var images = [
   "happy"
 
 ];
-var maxTimeLimitInSeconds = 20;
 var clone = images.slice(0); // duplicate array
 var cards = images.concat(clone); // merge to arrays
+var gameStarted = false; // Variable to track whether the game has started
 
 // Shuffel function
 function shuffle(r){
@@ -89,4 +89,33 @@ var win = function () {
   if (seconds > 9){
     appendSeconds.innerHTML = seconds;
    }
+}
+
+var container = document.getElementById("container");
+
+// audio
+container.addEventListener("click", function () {
+  if (!gameStarted) { // Check if the game has not started yet
+    // Get the audio element
+    var audio = document.getElementById("myAudio");
+
+    // Play the audio
+    audio.play();
+
+    // Set gameStarted to true to prevent further plays
+    gameStarted = true;
+
+    // Start the game logic (e.g., card flipping, timer, etc.)
+    startGame();
+  }
+});
+
+// Function to start the game logic (you can replace this with your existing game logic)
+function startGame() {
+  // Your existing game logic here
+}
+
+// Reset gameStarted to false when the game ends (You can call this function when the game ends)
+function endGame() {
+  gameStarted = false;
 }
