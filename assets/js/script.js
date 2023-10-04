@@ -22,7 +22,8 @@ var cards = images.concat(clone); // merge to arrays
 
 // Shuffel function
 function shuffle(r){
-  for(var j, x, i = r.length; i; j = Math.floor(Math.random() * i), x = r[--i], r[i] = r[j], r[j] = x);
+  for(var j, x, i = r.length; i; j = Math.floor(Math.random() * i),
+  x = r[--i], r[i] = r[j], r[j] = x);
   return r;
 }
 shuffle(cards);
@@ -32,8 +33,8 @@ for (var i = 0; i < cards.length; i++) {
   card.dataset.view = "card";
   myCards.appendChild(card);
   card.onclick = function () {
-    if (this.className !='flipped' && this.className != 'correct'){
-        this.className ='flipped';
+    if (this.className !="flipped" && this.className != "correct"){
+        this.className ="flipped";
         var result = this.dataset.item;
         resultsArray.push(result);
         clearInterval(Interval);
