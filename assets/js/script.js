@@ -12,15 +12,17 @@ var images = [
   'strong', 
   'healthy', 
   'traveller', 
-  'peaceful'
-];
+  'peaceful',
+  'happy'
 
+];
+var maxTimeLimitInSeconds = 20;
 var clone = images.slice(0); // duplicate array
 var cards = images.concat(clone); // merge to arrays 
 
 // Shuffel function
 function shuffle(o){
-  for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i],   o[i] = o[j], o[j] = x);
+  for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
   return o;
 }
 shuffle(cards);
@@ -75,7 +77,7 @@ var check = function(className) {
 
 var win = function () {
 
-  if(counter === 5) {
+  if(counter === 6) {
     clearInterval(Interval);
     text.innerHTML = "Your time was " + seconds + ":" + tens;
   } 
@@ -106,4 +108,3 @@ function startTimer () {
   }
   
 }
-

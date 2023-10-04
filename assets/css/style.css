@@ -2,14 +2,15 @@ body {
     background-image: linear-gradient(to right, green, yellow);
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     height: 100%;
-    color: #fff;
     text-align: center;
+  
   }
   h1 {
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to right, #f32170,
         #ff6b08, #cf23cf, #eedd44);
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     -webkit-background-clip: text;
   }
   h1, h2 {
@@ -54,10 +55,11 @@ body {
     border: solid 1px #fff;
     color: #82d2e5;
   }
-  
+
   #container {
-    width: 630px;
-    margin: 10px auto;
+    margin: auto;
+    width: 800px;
+    
   }
   #container:after {
     content: "";
@@ -74,7 +76,6 @@ body {
     float: left;
     margin: 10px;
     cursor: pointer;
-    background: linear-gradient(135deg, #f3f3f3 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px), linear-gradient(225deg, #f3f3f3 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px) 0 64px;
     background-color: #f3f3f3;
     background-size: 64px 128px;
   }
@@ -131,8 +132,14 @@ body {
     background: url("../images/traveller.jpg") left center no-repeat #fff;
     background-size: contain;
   }
+  .correct[data-item=happy],
+  .flipped[data-item=happy] {
+    background: url("../images/happy.jpg") left center no-repeat #fff;
+    background-size: contain;
+  }
 
-  @media screen and (max-width: 743px) {
+
+  @media screen and (max-width: 783px) {
     #container {
       width: auto;
       margin: 5px auto;
